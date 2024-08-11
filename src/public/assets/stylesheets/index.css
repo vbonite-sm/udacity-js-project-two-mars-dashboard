@@ -1,0 +1,306 @@
+/* MOBILE */
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-color: #f1f1f0;
+  color: #091d36;
+  font-family: Arial;
+  min-height: 100vh;
+}
+
+h1 {
+  margin: 0;
+  font-family: Arial;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+h2,
+h3 {
+  font-family: Arial;
+}
+
+a {
+  text-decoration: none;
+  color: #f1f1f0;
+  font-weight: 400;
+}
+
+a:hover {
+  color: #c2d2e9;
+  cursor: pointer;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  background-color: #091d36;
+}
+
+footer {
+  display: flex;
+  background-color: #f0eeee;
+}
+
+.main-flex {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.main-flex > * {
+  flex: 1 100%;
+}
+
+.main-title {
+  padding: 1rem 0;
+}
+
+.navbar-flex {
+  padding: 1rem 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-flex {
+  display: flex;
+  align-items: center;
+}
+
+.logo-flex img {
+  width: 2rem;
+  margin-right: 0.2rem;
+}
+
+.logo-flex p {
+  color: #fff;
+  font-family: "Arial";
+  font-size: 0.8rem;
+  padding: 0 0.3rem;
+}
+
+.items-navbar {
+  display: flex;
+  align-items: center;
+}
+
+.items-navbar li {
+  padding: 0 1rem;
+}
+
+.items-navbar a {
+  font-size: 0.8rem;
+}
+
+.button-container {
+  padding: 2%;
+}
+
+.title span {
+  color: #086925;
+}
+
+.gallery {
+  display: grid;
+  width: 100%;
+  margin: 3rem 0;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+}
+
+.gallery img {
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid rgb(0 0 0 / 22%);
+}
+
+.wrapper {
+  background-color: #f2f6f9;
+  color: #162945;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper-info {
+  padding: 1rem;
+}
+
+.wrapper-info span {
+  color: #28ab6e;
+  font-weight: 400;
+}
+
+.container {
+  padding: 10% 6%;
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+}
+
+.wrapper-buttons {
+  border-radius: 0.5%;
+  background-color: rgb(64 61 61 / 45%);
+}
+
+.container-info {
+  padding: 5% 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  background-color: #091d36;
+  box-shadow: 0 1px 1px rgba(34, 34, 34, 0.1);
+  border-radius: 0.2em;
+  color: #fff;
+  transition: ease 0.3s all;
+}
+
+.btn:hover {
+  background: #6a86a8;
+  color: #fff;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.flex-item {
+  padding: 8%;
+  margin: 4% 2%;
+  text-align: center;
+}
+
+.credits,
+.credits a {
+  color: #6f777c;
+  font-size: 0.6rem;
+  text-align: center;
+}
+
+.credits {
+  padding: 2rem;
+}
+
+.rover-data {
+  padding-top: 30px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.rover-data > h1 {
+  padding-bottom: 15px;
+  color: #3a4e7a;
+  font-weight: 600;
+}
+
+.rover-data > p {
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+
+/*  CUSTOM  */
+@media (min-width: 500px) {
+  .flex-item {
+    flex: 1 1 calc(50% - 4%);
+  }
+  .container-img {
+    padding: 40% 10%;
+  }
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  /* use mobile */
+  .flex-item a {
+    font-size: 1.3rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .flex-item {
+    flex: 0 calc(33% - 4%);
+    margin: 4% 1%;
+  }
+
+  .container {
+    padding: 15% 7%;
+  }
+
+  .logo-flex p {
+    font-size: 1.6rem;
+  }
+
+  .logo-flex img {
+    width: 3.5rem;
+  }
+
+  .items-navbar a {
+    font-size: 1.2rem;
+  }
+}
+
+/* CUSTOM */
+
+@media (min-width: 960px) {
+  /* use mobile */
+  .container,
+  .container-info {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .gallery {
+    margin: 2rem 0;
+  }
+
+  .container-info {
+    padding: 10% 1%;
+  }
+
+  .container {
+    padding: 25% 7%;
+  }
+
+  .flex-item a {
+    font-size: 1.6rem;
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 1224px) {
+  /* use mobile */
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* LARGE SCREENS */
+
+@media (min-width: 1824px) {
+  /* use mobile */
+  .gallery {
+    grid-gap: 12px;
+  }
+}
+
+/* CUSTOM -- iPad Pro */
+@media (min-width: 1021px) and (min-height: 1200px) {
+  .container {
+    padding: 35% 7%;
+  }
+}
