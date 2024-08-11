@@ -17,8 +17,8 @@ const render = async (root, state) => {
 }
 
 const App = (state) => {
-    
-    if (state.get('currentRover') === 'none')  {
+    const item = state.get('currentRover');
+    if (item === 'none')  {
         return (`
             <header>
                 <div class="navbar-flex">
@@ -50,11 +50,11 @@ const App = (state) => {
             </div>
         </header>
             <div class="container-info">
-                <h1 class="title">The <span>${state.get('currentRover').latest_photos[0].rover.name}</span> Rover</h1>	
+                <h1 class="title">The <span>${item.latest_photos[0].rover.name}</span> Rover</h1>	
                 <div class ="rover-data">
-                <p class="title"><span>Launch date:</span> ${state.get('currentRover').latest_photos[0].rover.launch_date}</p>
-                <p class="title"><span>Landing date:</span> ${state.get('currentRover').latest_photos[0].rover.landing_date}</p>
-                <p class="title"><span>Mission status:</span> ${state.get('currentRover').latest_photos[0].rover.status}</p>
+                <p class="title"><span>Launch date:</span> ${item.latest_photos[0].rover.launch_date}</p>
+                <p class="title"><span>Landing date:</span> ${item.latest_photos[0].rover.landing_date}</p>
+                <p class="title"><span>Mission status:</span> ${item.latest_photos[0].rover.status}</p>
                 </div>
                 <div class="gallery">${imageGallery(state)}</div>
             </div>
